@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --page-1-bg: #0e2954;
+  --page-2-bg: #1f6e8c;
+  --page-3-bg: #2e8a99;
+  --page-4-bg: #84a7a1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+  color: #fff;
+}
+
+#page-1 {
+  background-color: var(--page-1-bg);
+}
+
+#page-2 {
+  background-color: var(--page-2-bg);
+}
+
+#page-3 {
+  background-color: var(--page-3-bg);
+}
+
+#page-4 {
+  background-color: var(--page-4-bg);
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  margin: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.4s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#page-1 h1 {
+  animation: heading 0.5s forwards ease-in;
+}
+
+#page-2 h1 {
+  animation: heading 0.5s forwards ease-in;
+}
+
+#page-1 .btn {
+  animation: bounce 0.5s alternate infinite;
+}
+
+@keyframes heading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  from {
+    transform: translateY(20px);
+  }
+}
